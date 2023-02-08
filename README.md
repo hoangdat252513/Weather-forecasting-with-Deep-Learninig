@@ -5,8 +5,7 @@ Use Irish Weather dataset from kaggle to experiment various Deep Learning model 
 Dataset: https://www.kaggle.com/datasets/conorrot/irish-weather-hourly-data
 
 # Engineering Features
-handle missing value, scaling, generate sequences to sequences pattern
-## Handle missing value
+Handle missing value, change type features, scaling, generate sequences to sequences pattern
 
 ## Scaling
 Instead of Normalization, I extremely recommend use Standardization for time series data
@@ -14,6 +13,11 @@ Instead of Normalization, I extremely recommend use Standardization for time ser
 Here's the point, Normalization commonly scale data to range [0;1] or [-1;1] from min and max values but the problem is in time series data (like stock price, weather, many quantitle values,...) values always increasing. In other words, there's no maximum value, maybe in this currently dataset have max value but in fact if we change or update data the range value will change and the weight we scale gonna be different; the value has no upper bound or lower bound either. 
 
 Generally, Normalization for time series data don't affect to the wrong computation but it's a mistake cause it's unboundary data. So, Standardization is more appropriate
+
+## Avoid Data Leakage
+One common mistake is to use the entire training data to generate global statistics before splitting it into different splits (training, validation, test), leaking the mean and variance of the test sample into the training process, allowing a model to adjust its predictions for the test samples. This information isn't available in production, so the model's perfornmance will likely degrade. In other words, we learn features from training data and predict test data that we don't know what feature it have,
+
+To avoid leakage, always split data first before scaling, then use the statistics from the train split to scale all the splits. Some even suggest that we split our data before any exploratory data analysis and processing, so that we don't accidentally gain information about the test split
 
 ## Generate Seq2Seq pattern
 Time series forecasting is the Seq2Seq form. So before we apply model, we have to generate pattern Seq2Seq: historical time stamped data -> future data predicted based on historical data.
@@ -26,10 +30,11 @@ For example, if we have data [1, 2, 3, 4, 5, 6, 7, 8] we gonna generate pattern 
  
  [[[3], [4], [5], [6], [7]]] -> [8] and so on.
  
+ Or you can use TimeSeriesGenerator instead. https://machinelearningmastery.com/how-to-use-the-timeseriesgenerator-for-time-series-forecasting-in-keras/
 
 # Seasonal_Decompose Analysis
 Here is the result I decompose first 1000 sample temperature feaeture equal to 42 days, cause with large sample it can't clearly analyize.
-![image](https://user-images.githubusercontent.com/83870939/217514237-8c7207c7-55bd-48c1-9a40-6061d2828381.png)
+![image](https://user-images.githubusercontent.com/83870939/217588831-d2d5a5e8-bdc5-40ff-8bcd-11787847420d.png)
 
 An additive model suggests that the components are added together as follows: y(t) = Observation + Trend + Seasonality + Residual
 - Observation(or level) is the main value that goes on average with time.
