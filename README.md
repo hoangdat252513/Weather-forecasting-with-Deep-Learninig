@@ -10,7 +10,7 @@ Handle missing value, change type features, scaling, generate sequences to seque
 ## Scaling
 Instead of Normalization, I extremely recommend use Standardization for time series data
 
-Here's the point, Normalization commonly scale data to range [0;1] or [-1;1] from min and max values but the problem is in time series data (like stock price, weather, many quantitle values,...) values always increasing. In other words, there's no maximum value, maybe in this currently dataset have max value but in fact if we change or update data the range value will change and the weight we scale gonna be different; the value has no upper bound or lower bound either. 
+Here's the point, Normalization commonly scale data to range [0;1] or [-1;1] from min and max values but the problem is in time series data (like stock price, weather, many quantitle values,...) values always increasing (or decreasing). In other words, there's no maximum value, maybe in this currently training data have max value but in fact if Normalization fit by training and transform by test data the range value will be different, the value has no upper bound or lower bound either. 
 
 Generally, Normalization for time series data don't affect to the wrong computation but it's a mistake cause it's unboundary data. So, Standardization is more appropriate
 
