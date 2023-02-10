@@ -56,7 +56,7 @@ If you try to predict few sample maybe about in 2 month, you'll see the model pr
 # Implement Model
 
 ## Hyperparameter Tuning
-For better performance I use RandomSearch from Keras_tuner to tune hyperparameter and find the best set of hyperparameter. It takes lots of times to tuning but it funny =)) You can skip this tuning and experiment your own set hyperparameter
+For better performance I use RandomSearch from Keras_tuner to tune hyperparameter and find the best set. It takes lots of times to tuning but it funny =)) You can skip this tuning and experiment your own set hyperparameter
 
 ![image](https://user-images.githubusercontent.com/83870939/218054999-88fa83b7-cbcb-46c1-809d-4c988397746e.png)
 
