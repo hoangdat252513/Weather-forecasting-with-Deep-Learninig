@@ -52,3 +52,6 @@ Based on the ideal of generate time series data and model after training. I'm go
 ![image](https://user-images.githubusercontent.com/83870939/217531929-0daff6e7-44a7-4e97-804b-ebed63bdf30c.png)
 
 If you try to predict few sample maybe about in 2 month, you'll see the model predict the next sample and it's seemlike "look fine" cause it's still look like the seasonal_decompose above but how about if we predict further ?. The problem is the feature of next sample based on the previous sample and following the trend of old data, it don't have biased to shuffle data and the data more and more converging to a central line. This is contrary to real-world data.
+
+
+![image](https://user-images.githubusercontent.com/83870939/218054999-88fa83b7-cbcb-46c1-809d-4c988397746e.png)
