@@ -60,7 +60,7 @@ For better performance I use BayesianOptimization from Keras_tuner to tune hyper
 
 You can skip this tuning and experiment your own set hyperparameter
 
-![image](https://user-images.githubusercontent.com/83870939/218054999-88fa83b7-cbcb-46c1-809d-4c988397746e.png)
+![image](https://user-images.githubusercontent.com/83870939/218120520-5c056e4d-6e36-4fed-b13a-b3410fe192a6.png)
 
 During tuning process, it'll save the best set of hyperparameter that your loss will be minimum. 
 ## Model LSTM, GRU, CNN
