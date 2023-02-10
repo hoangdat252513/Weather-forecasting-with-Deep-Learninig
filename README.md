@@ -56,7 +56,7 @@ If you try to predict few sample maybe about in 2 month, you'll see the model pr
 # Implement Model
 
 ## Hyperparameter Tuning
-For better performance I use RandomSearch from Keras_tuner to tune hyperparameter and find the best set. It takes lots of times to tuning but it funny =)) You can choose optional range of unit. In this case I only use 1 hidden layer (or 2) cause more hidden layer for this data can easily lead to overfitting
+For better performance I use BayesianOptimization from Keras_tuner to tune hyperparameter and find the best set. It takes lots of times to tuning but it funny =)) You can choose optional range of unit. In this case I only use 1 hidden layer (or 2) cause more hidden layer for this data can easily lead to overfitting
 
 You can skip this tuning and experiment your own set hyperparameter
 
