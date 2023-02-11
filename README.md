@@ -45,14 +45,6 @@ An additive model suggests that the components are added together as follows: y(
 - Residual(or Noise) component is obtained after removing the trend and seasonal components from the time series.
 The data seem very clean and reliable to forecast
 
-# Experiment Generator more sample to predict future
-
-Based on the ideal of generate time series data and model after training. I'm gonna try predict the weather from january 6th 2020 to now (january 2023) and it failed
-
-![image](https://user-images.githubusercontent.com/83870939/217531929-0daff6e7-44a7-4e97-804b-ebed63bdf30c.png)
-
-If you try to predict few sample maybe about in 2 month, you'll see the model predict the next sample and it's seemlike "look fine" cause it's still look like the seasonal_decompose above but how about if we predict further ?. The problem is the feature of next sample based on the previous sample and following the trend of old data, it don't have biased to shuffle data and the data more and more converging to a central line. This is contrary to real-world data.
-
 # Implement Model
 
 ## Hyperparameter Tuning
@@ -67,3 +59,11 @@ During tuning process, it'll save the best set of hyperparameter that your loss 
 
 ![image](https://user-images.githubusercontent.com/83870939/218250412-38dbf0f3-8a82-4781-ab5a-335005ab7d76.png)
 
+
+# Experiment Generator more sample to predict future
+
+Based on the ideal of generate time series data and model after training. I'm gonna try predict the weather from january 6th 2020 to now (january 2023) and it failed
+
+![image](https://user-images.githubusercontent.com/83870939/217531929-0daff6e7-44a7-4e97-804b-ebed63bdf30c.png)
+
+If you try to predict few sample maybe about in 2 month, you'll see the model predict the next sample and it's seemlike "look fine" cause it's still look like the seasonal_decompose above but how about if we predict further ?. The problem is the feature of next sample based on the previous sample and following the trend of old data, it don't have biased to shuffle data and the data more and more converging to a central line. This is contrary to real-world data.
