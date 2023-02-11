@@ -63,4 +63,7 @@ You can skip this tuning and experiment your own set hyperparameter
 ![image](https://user-images.githubusercontent.com/83870939/218120520-5c056e4d-6e36-4fed-b13a-b3410fe192a6.png)
 
 During tuning process, it'll save the best set of hyperparameter that your loss will be minimum. 
-## Model LSTM, GRU, CNN
+## Evaluate Model LSTM, GRU, CNN
+
+![image](https://user-images.githubusercontent.com/83870939/218250412-38dbf0f3-8a82-4781-ab5a-335005ab7d76.png)
+
