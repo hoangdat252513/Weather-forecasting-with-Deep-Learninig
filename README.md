@@ -58,9 +58,11 @@ During tuning process, it'll save the best set of hyperparameter that your loss 
 ## Evaluate Model 
 
 Predict from 1 feature (timestep = 30) to 1 feature (timestep = 1)
+
 ![image](https://user-images.githubusercontent.com/83870939/218250412-38dbf0f3-8a82-4781-ab5a-335005ab7d76.png)
 
 Predict from 4 feature (timestep = 30) to 2 feature (timestep = 1)
+
 ![image](https://user-images.githubusercontent.com/83870939/218452393-50de8a27-4657-439f-a90b-3e7ce4f171b8.png)
 
 # Experiment Generator more sample to predict future
