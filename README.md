@@ -1,4 +1,4 @@
-# Weather-forecasting-with-Deep-Learning
+# Weather-forecasting-with-LSTM
 Time series forecasting is the process of analyzing time series data using statistics and modeling to make predictions and inform strategic decision-making.
 Use Irish Weather dataset from kaggle to experiment various Deep Learning model (LSTM, RNN, CNN - Conv1D, GRU, and Transformer) to forecast Weather in a specific station and many specific features to forecast. Then, choose the best result 
 
