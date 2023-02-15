@@ -4,7 +4,7 @@ Use Irish Weather dataset from kaggle to experiment various Deep Learning model 
 
 Dataset: https://www.kaggle.com/datasets/conorrot/irish-weather-hourly-data
 
-# Engineering Features
+# Feature Engineering
 Handle missing value, change type features, scaling, generate sequences to sequences pattern
 
 ## Generate Seq2Seq pattern
